@@ -28,4 +28,7 @@ Therefore, in the RGB standard, each pixel consists of three channels, each repr
 <sub>Figura 2. Representation of an RGB color wheel</sub>
 </p>
 
+### The Framework
+
+Considering current operating systems protect memory from direct access, a framework provided by the professor will be used to simulate access to video memory. The framework files can be accessed in the [myGL Framework](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%231/mygl_framework) repository.
 
