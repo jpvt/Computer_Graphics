@@ -2,12 +2,12 @@
 
 ## Framework Structure
  
- * core.h: contains macros that determine the dimensions of the window in pixels.
- * frame_buffer.h: declares the fb_ptr pointer, which points to the first byte of the color buffer. The position pointed to by fb_ptr corresponds to the coordinate pixel (0,0), located in the upper corner left of the window. Each pixel has 4 color components (Red, Green, Blue, Alpha), each represented by 1 byte (unsigned char).
- * main.c and main.h: define functions and variables necessary to simulate access to video memory.
- * Makefile: suggested compilation procedure for Unix systems.
- * mygl.h: contains the declaration of the function MyGlDraw (), responsible for invoking the raster functions that I will develop. It is also in this file that I will declare the functions developed.
- * mygl.c: where the raster functions will be defined. This file also contains the definition of the MyGlDraw () function, whose body I changed so that my raster functions are properly invoked.
+ * **core.h:** contains macros that determine the dimensions of the window in pixels.
+ * **frame_buffer.h:** declares the fb_ptr pointer, which points to the first byte of the color buffer. The position pointed to by fb_ptr corresponds to the coordinate pixel (0,0), located in the upper corner left of the window. Each pixel has 4 color components (Red, Green, Blue, Alpha), each represented by 1 byte (unsigned char).
+ * **main.c and main.h:** define functions and variables necessary to simulate access to video memory.
+ * **Makefile:** suggested compilation procedure for Unix systems.
+ * **mygl.h:** contains the declaration of the function MyGlDraw (), responsible for invoking the raster functions that I will develop. It is also in this file that I will declare the functions developed.
+ * **mygl.c:** where the raster functions will be defined. This file also contains the definition of the MyGlDraw () function, whose body I changed so that my raster functions are properly invoked.
 
 ---
 

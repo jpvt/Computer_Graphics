@@ -6,13 +6,14 @@ In this activity,  I will discuss and implement algorithms or the rasterization 
 
 ---
 
-## Introduction
-
-### The Framework
+## The Framework
 
 Considering current operating systems protect memory from direct access, a framework provided by the professor will be used to simulate access to video memory. The framework files can be accessed in the [myGL Framework](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%231/mygl_framework) repository.
 
 The Framework structure, dependencies and compilation instructions are described in [myGL Framework](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%231/mygl_framework).
+
+---
+## Introduction
 
 ### Digital Images
 
