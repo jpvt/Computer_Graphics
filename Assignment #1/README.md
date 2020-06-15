@@ -15,8 +15,6 @@ The Framework structure, dependencies and compilation instructions are described
 ---
 ## Introduction
 
-### Digital Images
-
 A digital image is composed of *pixels*, each with finite, discrete quantities of numeric representation for its intensity. The digital image contains a fixed number of rows and columns of pixels, typically stored in computer memory as a *raster image*, a two-dimensional array of small integers, each represents an associated color to a specific pixel.
 
 Therefore, in the RGB standard, each pixel consists of three channels, each representing a color (R for red, G for green and B for blue). Usually, 8 bits are reserved for each component(channel), which is distinguished in 256 different intensity levels for each color, resulting in approximately 16 million colors reproduced in total. Additionally, channel A (alpha) can be used for transparency. Consequently, the representation of the components of an RGBA space is given as follows:
@@ -34,8 +32,9 @@ Therefore, in the RGB standard, each pixel consists of three channels, each repr
 <p align="center">
 <sub>Figure 2. Representation of an RGB color wheel</sub>
 </p>
+---
 
-### Putting pixels in the monitor
+## Putting pixels in the monitor
 
 As seen before, a raster image is composed of a two-dimensional space, although the memory is represented linearly. Therefore, it is necessary to calculate an offset so that each pixel (given its position X and Y), occupies a single space in memory.
 
@@ -54,11 +53,4 @@ Considering that the number of pixels on the screen is equal to the number of li
 </p>
 <p align="center">
 <sub>Figure 5. Representation of the offset algorithm and color buffer</sub>
-</p>
-
-<p align="center">
-  <img src="imgs/vram_storg.png" >
-</p>
-<p align="center">
-<sub>Figure 6. Representation of the video memory screen image footprint</sub>
 </p>
