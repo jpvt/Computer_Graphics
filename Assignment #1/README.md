@@ -39,24 +39,24 @@ Therefore, in the RGB standard, each pixel consists of three channels, each repr
 
 As seen before, a raster image is composed of a two-dimensional space, although the memory is represented linearly. Therefore, it is necessary to calculate an offset so that each pixel (given its position X and Y), occupies a single space in memory.
 
-Consequently, an algorithm was presented in the classroom that performs such allocation, as can be exemplified in the image presented:
+Consequently, an algorithm was presented in the classroom that performs such allocation, as can be exemplified in the following images:
 <p align="center">
   <img src="imgs/img_storage.png" >
 </p>
 <p align="center">
-<sub>Figure 4. Representation of the offset algorithm</sub>
+<sub>Figure 4. Representation of the image storage</sub>
 </p>
 
 <p align="center">
   <img src="imgs/Pixel-alloc-alg.png" >
 </p>
 <p align="center">
-<sub>Figure 5. Representation of the offset algorithm</sub>
+<sub>Figure 5. Representation of the offset algorithm and color buffer</sub>
 </p>
 
 <p align="center">
   <img src="imgs/vram_storg.png" >
 </p>
 <p align="center">
-<sub>Figure 6. Representation of the offset algorithm</sub>
+<sub>Figure 6. Representation of the video memory screen image footprint</sub>
 </p>
