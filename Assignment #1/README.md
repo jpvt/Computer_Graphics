@@ -17,11 +17,15 @@ Therefore, in the RGB standard, each pixel consists of three channels, each repr
 <p align="center">
   <img src="imgs/Pixel-alloc.png" >
 </p>
+<p align="center">
 <sub>Figura 1. Representation of an RGBA image storage</sub>
+</p>
 
 <p align="center">
   <img src="imgs/RGB-space.jpg" >
 </p>
+<p align="center">
 <sub>Figura 2. Representation of an RGB color wheel</sub>
+</p>
 
 
