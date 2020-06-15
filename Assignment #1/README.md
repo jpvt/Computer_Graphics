@@ -8,6 +8,12 @@ In this activity,  I will discuss and implement algorithms or the rasterization 
 
 ## Introduction
 
+### The Framework
+
+Considering current operating systems protect memory from direct access, a framework provided by the professor will be used to simulate access to video memory. The framework files can be accessed in the [myGL Framework](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%231/mygl_framework) repository.
+
+The Framework structure, dependencies and compilation instructions are described in [myGL Framework](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%231/mygl_framework).
+
 ### Digital Images
 
 A digital image is composed of *pixels*, each with finite, discrete quantities of numeric representation for its intensity. The digital image contains a fixed number of rows and columns of pixels, typically stored in computer memory as a *raster image*, a two-dimensional array of small integers, each represents an associated color to a specific pixel.
@@ -27,8 +33,3 @@ Therefore, in the RGB standard, each pixel consists of three channels, each repr
 <p align="center">
 <sub>Figure 2. Representation of an RGB color wheel</sub>
 </p>
-
-### The Framework
-
-Considering current operating systems protect memory from direct access, a framework provided by the professor will be used to simulate access to video memory. The framework files can be accessed in the [myGL Framework](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%231/mygl_framework) repository.
-
