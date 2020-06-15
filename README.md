@@ -1,5 +1,7 @@
 [![author](https://img.shields.io/badge/author-jpvt-red.svg)](https://www.linkedin.com/in/jpvt)
-# Introduction to Computer Graphics
+<p align="center">
+  <img src="banner_cg.jpg" >
+</p>
 
 Repository dedicated to the assignments developed at Introduction to Computer Graphics course, oriented by Professor Christian Azambuja Pagot at Universidade Federal da Paraíba.
 
