@@ -47,6 +47,8 @@ Consequently, an algorithm was presented in the classroom that performs such all
 <sub>Figure 4. Representation of the image storage</sub>
 </p>
 
+Considering that the number of pixels on the screen is equal to the number of lines multiplied by the number of columns, the memory must have this same number of positions to represent the screen linearly. Therefore, the following algorithm decides the position of each pixel and each channel of a pixel in memory, considering the width in pixels of the screen:
+
 <p align="center">
   <img src="imgs/Pixel-alloc-alg.png" >
 </p>

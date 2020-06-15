@@ -36,3 +36,22 @@ If GLM is not available in your distribution repository, you have the option to 
 ```
 $ glxinfo | grep OpenGL
 ```
+
+---
+
+## Compilation Instructions
+
+**Compilation**
+```
+$ make
+```
+
+**Cleaning**
+```
+$ make clean
+```
+
+**Run**
+```
+$ ./mygl
+```
