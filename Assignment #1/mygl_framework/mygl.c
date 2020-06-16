@@ -19,13 +19,12 @@ pixel_t SetPixel(unsigned int x, unsigned int y, unsigned int red, unsigned int 
 }
 void PutPixel(pixel_t pixel){
 
-    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 0] = pixel.rgba.red;
-    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 1] = pixel.rgba.green;
-    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 2] = pixel.rgba.blue;
-    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 3] = pixel.rgba.alpha;
+    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 0] = pixel.rgba.red; //Sets red intensity in the memory
+    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 1] = pixel.rgba.green; //Sets green intensity in the memory
+    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 2] = pixel.rgba.blue; //Sets blue intensity in the memory
+    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 3] = pixel.rgba.alpha; //Sets transparency intensity in the memory
 }
 
-// Definição da função que chamará as funções implementadas pelo aluno
 void MyGlDraw(void) {
  
  //printf("Image Width = %d\nImage Height = %d\n", IMAGE_WIDTH, IMAGE_HEIGHT);

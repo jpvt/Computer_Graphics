@@ -66,6 +66,7 @@ Thus, the pixel position and the RGBA color definition are required to rasterize
 </p>
 
 * **PutPixel()**
+
     After setting the Pixel information, the pixel is ready to be printed in the window with the function **PutPixel** based on the algorithm discussed before.
 
     <p align="center">
