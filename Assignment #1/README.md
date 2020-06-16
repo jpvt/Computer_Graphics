@@ -32,6 +32,7 @@ Therefore, in the RGB standard, each pixel consists of three channels, each repr
 <p align="center">
 <sub>Figure 2. Representation of an RGB color wheel</sub>
 </p>
+
 ---
 
 ## Putting pixels in the monitor
@@ -54,3 +55,31 @@ Considering that the number of pixels on the screen is equal to the number of li
 <p align="center">
 <sub>Figure 5. Representation of the offset algorithm and color buffer</sub>
 </p>
+
+Thus, the pixel position and the RGBA color definition are required to rasterize a pixel on the screen. To do so, I have created the following structures and functions:
+
+<p align="center">
+  <img src="imgs/putpixel_h.png" >
+</p>
+<p align="center">
+<sub>Figure 6. Pixel struct, SetPixel ,and PutPixel Functions declaration</sub>
+</p>
+
+* **PutPixel()**
+    After setting the Pixel information, the pixel is ready to be printed in the window with the function **PutPixel** based on the algorithm discussed before.
+
+    <p align="center">
+    <img src="imgs/putpixel_c.png" >
+    </p>
+    <p align="center">
+    <sub>Figure 7. SetPixel, PutPixel functions</sub>
+    </p>
+
+    In the following figure, I have printed 5 pixels in the screen to test my function.
+
+    <p align="center">
+    <img src="imgs/putpixel_term.png" >
+    </p>
+    <p align="center">
+    <sub>Figure 8. PutPixel in action</sub>
+    </p>

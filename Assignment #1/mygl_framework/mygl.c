@@ -1,33 +1,39 @@
 #include "mygl.h"
+#include <stdio.h>
 
 //
-// >>> Defina aqui as funções que você implementar <<< 
-void PutPixel(tuple_t coord, colors_t rgba){
+// >>> Functions Implemented by me <<< 
+/* Function that sets pixel coordinates and rgba values*/
+pixel_t SetPixel(unsigned int x, unsigned int y, unsigned int red, unsigned int green, unsigned int blue, unsigned int alpha){
+    pixel_t pixel;
 
-    fb_ptr[4*coord.x + 4*coord.y + 0] = rgba.red;
-    fb_ptr[4*coord.x + 4*coord.y + 1] = rgba.green;
-    fb_ptr[4*coord.x + 4*coord.y + 2] = rgba.blue;
-    fb_ptr[4*coord.x + 4*coord.y + 3] = rgba.alpha;
+    pixel.coord.x = x; //Defines X position
+    pixel.coord.y = y; //Defines y position
+
+    pixel.rgba.red = red; //Defines red intensity
+    pixel.rgba.green = green; //Defines green intensity
+    pixel.rgba.blue = blue; //Defines blue intensity
+    pixel.rgba.alpha = alpha; //Defines transparency intensity
+
+    return pixel;
 }
-//
+void PutPixel(pixel_t pixel){
+
+    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 0] = pixel.rgba.red;
+    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 1] = pixel.rgba.green;
+    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 2] = pixel.rgba.blue;
+    fb_ptr[4*pixel.coord.x + 4*pixel.coord.y*IMAGE_WIDTH + 3] = pixel.rgba.alpha;
+}
 
 // Definição da função que chamará as funções implementadas pelo aluno
 void MyGlDraw(void) {
  
- colors_t rgba;
- tuple_t coord;
-
- rgba.red = 255;
- rgba.green = 0;
- rgba.blue = 255;
- rgba.alpha = 255;
-
- coord.x = 800;
- coord.y = 2000;
- //
- // >>> Chame aqui as funções que você implementou <<<
- PutPixel(coord, rgba);
- //
+ //printf("Image Width = %d\nImage Height = %d\n", IMAGE_WIDTH, IMAGE_HEIGHT);
+ int x,y;
+ printf("Insert coordinates:");
+ scanf("%d %d", &x, &y);
+ pixel_t pixel = SetPixel(x, y, 255, 0, 255, 255);
  
+ PutPixel(pixel);
 
 }
