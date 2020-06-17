@@ -14,7 +14,7 @@ The Framework structure, dependencies and compilation instructions are described
 
 ---
 
-**NOTE:** This is the short version of the assignment's article. If you want the long version explaining all the details about digital images and rasterization, please access the [long version](https://github.com/jpvt/Computer_Graphics/blob/master/Assignment%20%231/article.md).
+**NOTE:** This is the short version of the assignment's article. If you want the long version explaining details about digital images and rasterization(basically a newbies guide), please access the [long version](https://github.com/jpvt/Computer_Graphics/blob/master/Assignment%20%231/article.md).
 
 ## Features
 
