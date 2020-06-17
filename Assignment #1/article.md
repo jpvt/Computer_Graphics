@@ -84,3 +84,28 @@ Thus, the pixel position and the RGBA color definition are required to rasterize
     <p align="center">
     <sub>Figure 8. PutPixel in action</sub>
     </p>
+
+---
+
+## Rasterization
+
+<p align="center">
+<img src="imgs/rast_foley.png" >
+</p>
+<p align="center">
+<sub>Figure 9. Rasterization definition</sub>
+</p>
+
+Therefore, rasterization is an approximation of continuous variables to a discrete space. So, A line described mathematically is infinitesimally continuous, no matter how small a section of the line is observed, it is impossible to determine which is the next point after a given point; there are no breaks. However, in a discrete space, there are breaks, and it is possible to view each point individually.
+
+Consequently, rasterization can be used to draw a line on the monitor, as this is a discrete two-dimensional space. There is no problem when the line is horizontal, vertical, or diagonal. In such cases, just paint the line, column, or diagonal of pixels.
+
+However, when a line intersects more than one pixel at a given coordinate,  there is ambiguity as to choose which pixel will be painted.
+
+<p align="center">
+<img src="imgs/line_paint.png" >
+</p>
+<p align="center">
+<sub>Figure 9. Representation of line rasterization</sub>
+</p>
+
