@@ -225,5 +225,40 @@ In fact, this strategy is a variation of Bresenham's original algorithm, referre
 No, because we're evaluating a whole polynomial every pixel.
 
 <p align="center">
-<strong> How to make this algorithm efficient ? </strong>
+<strong> How to make this algorithm efficient? </strong>
+</p>
+
+It was observed that :
+
+<p align="center">
+<img src="imgs/e_chosen.png" >
+</p>
+<p align="center">
+<sub>Figure 13. Positive decision </sub>
+</p>
+
+
+<p align="center">
+<img src="imgs/ne_chosen.png" >
+</p>
+<p align="center">
+<sub>Figure 14. Negative decision</sub>
+</p>
+
+<p align="center">
+<img src="imgs/remember.png" >
+</p>
+<p align="center">
+<sub>Figure 15. Implicit line equation</sub>
+</p>
+
+<p align="center">
+<strong> How about the first pixel? </strong>
+</p>
+
+<p align="center">
+<img src="imgs/first_pixel.png" >
+</p>
+<p align="center">
+<sub>Figure 16 . First pixel decision equation</sub>
 </p>
