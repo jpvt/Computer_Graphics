@@ -260,5 +260,17 @@ It was observed that :
 <img src="imgs/first_pixel.png" >
 </p>
 <p align="center">
-<sub>Figure 16 . First pixel decision equation</sub>
+<sub>Figure 16. First pixel decision equation</sub>
+</p>
+ Now that we know how to draw a line on the first octant, we need to generalize the algorithm for all octants on the screen.
+
+ <p align="center">
+<strong> Octants Analysis </strong>
+</p>
+
+<p align="center">
+<img src="imgs/octants.png" >
+</p>
+<p align="center">
+<sub>Figure 17. Octants analysis</sub>
 </p>
