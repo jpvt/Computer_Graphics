@@ -148,3 +148,7 @@ If ![Delta X](https://latex.codecogs.com/png.latex?%5CDelta%20x%20%3D%201), then
 </p>
 
 This is usually referred as **The DDA(Digital differential analyzer) algorithm**.
+
+### **Bresenham Line Rasterization**
+
+A better solution for our problem is **The Bresenham's line algorithm**, this strategy is one of the earliest developed in the field of computer graphics, and it's known for being a very efficient method to draw lines because it uses only integer addition.
