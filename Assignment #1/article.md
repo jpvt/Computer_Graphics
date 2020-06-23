@@ -152,3 +152,78 @@ This is usually referred as **The DDA(Digital differential analyzer) algorithm**
 ### **Bresenham Line Rasterization**
 
 A better solution for our problem is **The Bresenham's line algorithm**, this strategy is one of the earliest developed in the field of computer graphics, and it's known for being a very efficient method to draw lines because it uses only integer addition.
+
+**Assuming that 0 <= *m* <= 1:**
+<p align="center">
+<img src = "https://latex.codecogs.com/png.latex?%5Cinline%20y_i%20%3D%20mx_i%20&plus;%20b">
+</p>
+
+<p align="center">
+<strong> Therefore </strong>
+</p>
+<p align="center">
+<img src = "https://latex.codecogs.com/png.latex?y%20%3D%20%5Cfrac%7B%5CDelta%20y%7D%7B%5CDelta%20x%7D%20x%20&plus;%20b">
+</p>
+
+<p align="center">
+<strong> Considering that an implicit equation of the line gives us the information if a given point is above, below, or on the line. Let's transform the above equation into an implicit equation for the line.</strong>
+</p>
+
+<p align="center">
+<img src = "https://latex.codecogs.com/png.latex?%5CDelta%20x%20y%20%3D%20%5CDelta%20x%20%5Cfrac%7B%5CDelta%20y%7D%7B%5CDelta%20x%7D%20x%20&plus;%20%5CDelta%20x%20b">
+</p>
+
+<p align="center">
+<img src = "https://latex.codecogs.com/png.latex?%5CDelta%20x%20y%20%3D%20%5CDelta%20y%20x%20&plus;%20%5CDelta%20x%20b">
+</p>
+
+<p align="center">
+<img src = "https://latex.codecogs.com/png.latex?0%20%3D%20%5CDelta%20y%20x%20&plus;%20%5CDelta%20x%20b%20-%20%5CDelta%20x%20y">
+</p>
+
+<p align="center">
+<strong> Then </strong>
+</p>
+
+<p align="center">
+<img src = "https://latex.codecogs.com/png.latex?%5CPhi%20%28x%2Cy%29%20%3D%20%5CDelta%20y%20x%20-%20%5CDelta%20x%20y%20&plus;%20%5CDelta%20x%20b%20%3D%200">
+</p>
+
+<p align="center">
+<strong> In formal notation: </strong>
+</p>
+
+<p align="center">
+<img src = "https://latex.codecogs.com/png.latex?%5CPhi%20%28x%2Cy%29%20%3D%20%5Calpha%20x%20&plus;%20%5Cbeta%20y%20&plus;%20%5Cgamma%20%3D%200%20%5C%5C%20%5Calpha%20%3D%20%5CDelta%20y%20%5C%5C%20%5Cbeta%20%3D%20-%20%5CDelta%20x%20%5C%5C%20%5Cgamma%20%3D%20%5CDelta%20x%20b">
+</p>
+
+<p align="center">
+<strong> What does this information mean to us? </strong>
+</p>
+
+
+The main point of Bresenham's line algorithm is to decide which pixel will be painted on the screen, whether it will be the pixel to the east or the northeast since we are only considering the first octant. Consequently, we apply the midpoint between the two pixels in the implicit line equation.
+
+<p align="center">
+<img src="imgs/midpoint.png" >
+</p>
+<p align="center">
+<sub>Figure 12.Bresenham's decision process</sub>
+</p>
+
+The decision result will be zero if the midpoint is on the line, positive if it is above, and negative if it is below. 
+
+The pixel to the northeast will be painted if the decision is negative, and if it is positive or equal to zero, the pixel to the east will be painted on the screen.
+
+In fact, this strategy is a variation of Bresenham's original algorithm, referred as **The Midpoint Line Algorithm**.
+
+
+<p align="center">
+<strong> Is this more efficient than the previous strategy? </strong>
+</p>
+
+No, because we're evaluating a whole polynomial every pixel.
+
+<p align="center">
+<strong> How to make this algorithm efficient ? </strong>
+</p>
