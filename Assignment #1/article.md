@@ -109,3 +109,42 @@ However, when a line intersects more than one pixel at a given coordinate,  ther
 <sub>Figure 9. Representation of line rasterization</sub>
 </p>
 
+<p align="center">
+<img src="imgs/pixel_grid.png" >
+</p>
+<p align="center">
+<sub>Figure 10. Line rasterization ambiguity example</sub>
+</p>
+
+A simple strategy to solve this problem is to compute the slope *m* between  ![delta_y/delta_x](https://latex.codecogs.com/png.latex?%5Cinline%20%5CDelta%20y/%5CDelta%20x), to increment *x* by 1 starting with the leftmost point, to calculate  ![line equation](https://latex.codecogs.com/png.latex?%5Cinline%20y_i%20%3D%20mx_i%20&plus;%20b)  for each ![x_i](https://latex.codecogs.com/png.latex?%5Cinline%20x_i), and to intesify the pixel at  ![Round x_i](https://latex.codecogs.com/png.latex?%5Cinline%20%28x_i%2C%20Round%28y_i%29%29), where  ![Round](https://latex.codecogs.com/png.latex?%5Cinline%20Round%28y_i%29%20%3D%20Floor%280.5%20&plus;%20y_i%29).
+
+
+<p align="center">
+<img src="imgs/basic_inc.png" >
+</p>
+<p align="center">
+<sub>Figure 11. Brute-force strategy</sub>
+</p>
+
+This strategy is called **The Basic Incremental Algorithm**, and it selects the pixel whose distance to the true line is smallest.
+
+<p align="center">
+<img src="imgs/line_result_basic.png" >
+</p>
+<p align="center">
+<sub>Figure 11. Line rasterization with the Basic Incremental Algorithm</sub>
+</p>
+
+However, this brute-force approach is quite inefficient, because each iteration requires a floating-point multiply, addition, and invocation of Floor. We can eliminate the multiplication by noting that: 
+
+<p align="center">
+<img src ="https://latex.codecogs.com/png.latex?y_%7Bi&plus;1%7D%20%3D%20mx_%7Bi&plus;1%7D%20&plus;%20b%20%3D%20m%28x_i%20&plus;%20%5CDelta%20x%29%20&plus;%20b%20%3D%20y_i%20&plus;%20m%5CDelta%20x">
+</p>
+
+If ![Delta X](https://latex.codecogs.com/png.latex?%5CDelta%20x%20%3D%201), then:
+
+<p align="center">
+<img src = "https://latex.codecogs.com/png.latex?y_%7Bi&plus;1%7D%20%3D%20y_i%20&plus;%20m">
+</p>
+
+This is usually referred as **The DDA(Digital differential analyzer) algorithm**.
