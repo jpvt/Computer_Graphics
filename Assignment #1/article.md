@@ -264,9 +264,11 @@ It was observed that :
 </p>
  Now that we know how to draw a line on the first octant, we need to generalize the algorithm for all octants on the screen.
 
- <p align="center">
-<strong> Octants Analysis </strong>
+
+<p align="center" style ="font-size:20px">
+<strong> Octants analysis </strong>
 </p>
+
 
 <p align="center">
 <img src="imgs/octants.png" >
@@ -274,3 +276,33 @@ It was observed that :
 <p align="center">
 <sub>Figure 17. Octants analysis</sub>
 </p>
+
+**1. Slope varies between 0 and 1 (0 <= m <= 1) and initial_X < final_X**
+
+**2. Slope greater than 1 (m > 1) and initial_Y < final_Y**
+
+**3. Slope less than -1 (m < -1) and initial_Y < final_Y**
+
+**4.  Slope varies between 0 and -1 (-1 <= m <= 0) and initial_X > final_X**
+
+**5.  Slope varies between 0 and 1 (0 <= m <= 1) and initial_X < final_X**
+
+**6. Slope greater than 1 (m > 1) and initial_Y > final_Y**
+
+**7. Slope less than -1 (m < -1) and initial_Y > final_Y**
+
+**8.  Slope varies between 0 and -1 (-1 <= m <= 0) and initial_X < final_X**
+
+
+After the octant analysis it is possible to notice that the octants with negative Delta X can be represented in octants with positive Delta X. Therefore:
+
+ * Octant #6 can be represented in Octant #2;
+ * Octant #5 can be represented in Octant #1;
+ * Octant #4 can be represented in Octant #8;
+ * Octant #3 can be represented in Octant #7;
+
+To do so, I swaped initial X and final X, thus ensuring that the line will be drawn on the positive side of X.
+
+Note that in the second octant, Delta Y is greater than Delta X, consequently, the pixel that is always incremented will be on the Y-axis. Therefore, to transfer to the first octant, everything that was concerning X will now work concerning Y.
+
+For octants #7 and #8, we can mirror the algorithm of octants 2 and 1 respectively, so that the pixel that is always incremented (X in octant 1 and Y in octant 2) is, in this case, decremented, since the line in these octants it grows negatively.
