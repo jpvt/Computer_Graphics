@@ -19,5 +19,39 @@ The Framework structure, dependencies and compilation instructions are described
 ## Features
 
  * **PutPixel:** Rasterizes a point in the video memory that receives as parameters as x (y) coordinates of the pixel on the screen and its color (RGBA).
+
+<p align="center">
+<img src="imgs/putpixel_term.png" >
+</p>
+<p align="center">
+<sub>Figure 1. PutPixel in action</sub>
+</p>
+
  * **DrawLine:** Rasterizes a line on the screen, taking as parameters the coordinates of its initial and final vertices (represented by tuples (x0, y0) and (x1, y1) respectively) and the colors (in RGBA format) of each vertex. The colors of the pixels along the rasterized line were obtained by linear interpolation of the colors of the vertices. The line rasterization was made through Bresenham's Algorithm.
+
+<p align="center">
+<img src="imgs/color_line_polar.png" >
+</p>
+<p align="center">
+<sub>Figure 2. DrawLine in action</sub>
+</p>
+
  * **DrawTriangle:** Function that draws as parts of a triangle on the screen, taking as parameters as positions of three vertices (x0, y0), (x1, y1) and (x2, y2) as well the colors (RGBA) of each of the vertices. As pixel centers of the edges of the triangle, they must be activated from the linear interpolation of the colors of their vertices.
+
+ <p align="center">
+<img src="imgs/color_triangle_inter.png" >
+</p>
+<p align="center">
+<sub>Figure 3. DrawTriangle in action</sub>
+</p>
+
+## Difficulties
+
+The main difficulty in this assignment was to adapt the midpoint algorithm to all octants on the DrawLine function. I also had some bugs with the Linear Color Interpolation algorithm, but after a few minutes it was solved.
+
+
+## Credits
+
+ * https://www.cs.helsinki.fi/group/goa/mallinnus/lines/bresenh.html
+ * https://en.wikipedia.org/wiki/Digital_image
+ * Prof. Christian Notes
