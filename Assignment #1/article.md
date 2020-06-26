@@ -307,6 +307,60 @@ Note that in the second octant, Delta Y is greater than Delta X, consequently, t
 
 For octants #7 and #8, we can mirror the algorithm of octants 2 and 1 respectively, so that the pixel that is always incremented (X in octant 1 and Y in octant 2) is, in this case, decremented, since the line in these octants it grows negatively.
 
+<p align="center">
+<img src="imgs/drawLine.png" >
+</p>
+<p align="center">
+<sub>Figure 18. DrawLine Function</sub>
+</p>
+
+<p align="center">
+<img src="imgs/DrawLineX.png" >
+</p>
+<p align="center">
+<sub>Figure 19. DrawLineX Function</sub>
+</p>
+
+<p align="center">
+<img src="imgs/DrawLineY.png" >
+</p>
+<p align="center">
+<sub>Figure 20. DrawLineY Function</sub>
+</p>
+
+<p align="center">
+<strong> DrawLine without Linear Color Interpolation </strong>
+</p>
+
+<p align="center">
+<img src="imgs/white_line.png" >
+</p>
+<p align="center">
+<sub>Figure 21. DrawLine in action</sub>
+</p>
+
 ### **Linear Color Interpolation**
 
 The Linear Color Interpolation Algorithm consists of interpolating the colors between the start and end points of the line in a linear way, that is, there must be a smooth gradient between the two points of the line.
+
+<p align="center">
+<img src="imgs/linear_color_inter.png" >
+</p>
+<p align="center">
+<sub>Figure 22. LinearColortIntepolation Function</sub>
+</p>
+
+<p align="center">
+<strong> DrawLine with Linear Color Interpolation </strong>
+</p>
+
+<p align="center">
+<img src="imgs/color_line_polar.png" >
+</p>
+<p align="center">
+<sub>Figure 21. DrawLine + LinearColortIntepolation in action</sub>
+</p>
+
+---
+
+## Drawing a triangle
