@@ -306,3 +306,7 @@ To do so, I swaped initial X and final X, thus ensuring that the line will be dr
 Note that in the second octant, Delta Y is greater than Delta X, consequently, the pixel that is always incremented will be on the Y-axis. Therefore, to transfer to the first octant, everything that was concerning X will now work concerning Y.
 
 For octants #7 and #8, we can mirror the algorithm of octants 2 and 1 respectively, so that the pixel that is always incremented (X in octant 1 and Y in octant 2) is, in this case, decremented, since the line in these octants it grows negatively.
+
+### **Linear Color Interpolation**
+
+The Linear Color Interpolation Algorithm consists of interpolating the colors between the start and end points of the line in a linear way, that is, there must be a smooth gradient between the two points of the line.
