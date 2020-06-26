@@ -10,8 +10,8 @@ Repository dedicated to the assignments developed at Introduction to Computer Gr
 
  *  [Assignment #1: Introduction to Rasterization Algorithms](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%231)
 
- <p align="center">
+<p align="center">
 <img src="imgs/color_triangle_inter.png" >
 </p>
 
-    In this assignment, I implemented algorithms for the rasterization of points and lines. The rasterization of these primitives will be done by simulating direct access to video memory. As current operating systems protect memory from direct access, I will use a framework, provided by the professor, that simulates access to video memory.
+In this assignment, I implemented algorithms for the rasterization of points and lines. The rasterization of these primitives will be done by simulating direct access to video memory. As current operating systems protect memory from direct access, I will use a framework, provided by the professor, that simulates access to video memory.
