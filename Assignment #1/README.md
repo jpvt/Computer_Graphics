@@ -79,6 +79,13 @@ The Framework structure, dependencies and compilation instructions are described
 <p align="center">
 <sub>Figure 3. DrawTriangle in action</sub>
 </p>
+ 
+<p align="center">
+<img src="imgs/drawTriangle.png" >
+</p>
+<p align="center">
+<sub>Figure 3.2. DrawTriangle Function</sub>
+</p>
 
 ## Difficulties
 
