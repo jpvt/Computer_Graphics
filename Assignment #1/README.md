@@ -27,6 +27,20 @@ The Framework structure, dependencies and compilation instructions are described
 <sub>Figure 1. PutPixel in action</sub>
 </p>
 
+<p align="center">
+  <img src="imgs/putpixel_h.png" >
+</p>
+<p align="center">
+<sub>Figure 1.2. Pixel struct, SetPixel ,and PutPixel Functions declaration</sub>
+</p>
+
+<p align="center">
+<img src="imgs/putpixel_c.png" >
+</p>
+<p align="center">
+<sub>Figure 1.3. SetPixel, PutPixel functions</sub>
+</p>
+
  * **DrawLine:** Rasterizes a line on the screen, taking as parameters the coordinates of its initial and final vertices (represented by tuples (x0, y0) and (x1, y1) respectively) and the colors (in RGBA format) of each vertex. The colors of the pixels along the rasterized line were obtained by linear interpolation of the colors of the vertices. The line rasterization was made through Bresenham's Algorithm.
 
 <p align="center">
@@ -34,6 +48,27 @@ The Framework structure, dependencies and compilation instructions are described
 </p>
 <p align="center">
 <sub>Figure 2. DrawLine in action</sub>
+</p>
+
+<p align="center">
+<img src="imgs/drawLine.png" >
+</p>
+<p align="center">
+<sub>Figure 2.2. DrawLine Function</sub>
+</p>
+
+<p align="center">
+<img src="imgs/DrawLineX.png" >
+</p>
+<p align="center">
+<sub>Figure 2.3. DrawLineX Function</sub>
+</p>
+
+<p align="center">
+<img src="imgs/DrawLineY.png" >
+</p>
+<p align="center">
+<sub>Figure 2.4. DrawLineY Function</sub>
 </p>
 
  * **DrawTriangle:** Function that draws as parts of a triangle on the screen, taking as parameters as positions of three vertices (x0, y0), (x1, y1) and (x2, y2) as well the colors (RGBA) of each of the vertices. As pixel centers of the edges of the triangle, they must be activated from the linear interpolation of the colors of their vertices.
