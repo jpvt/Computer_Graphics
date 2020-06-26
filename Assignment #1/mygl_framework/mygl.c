@@ -34,12 +34,18 @@ void LinearColorInterpolation(pixel_t pi, pixel_t * p_aux, pixel_t pf){
     int deltaX_aux = pf.coord.x - p_aux->coord.x;
     int deltaY_aux = pf.coord.y - p_aux->coord.y;
 
-    double interpol = sqrt(pow(deltaX_aux, 2) + pow(deltaY_aux, 2)) / sqrt(pow(delta_x, 2) + pow(delta_y, 2));
+    //double hypo = sqrt(pow(delta_x, 2) + pow(delta_y,2));
+    int r_dist = -pf.rgba.red + pi.rgba.red;
+    int g_dist = -pf.rgba.green + pi.rgba.green;
+    int b_dist = -pf.rgba.blue + pi.rgba.blue;
+    int a_dist = -pf.rgba.alpha + pi.rgba.alpha;
 
-    p_aux->rgba.red = pf.rgba.red + (pi.rgba.red - pf.rgba.red) * interpol;
-    p_aux->rgba.green = pf.rgba.green + (pi.rgba.green - pf.rgba.green) * interpol;
-    p_aux->rgba.blue = pf.rgba.blue + (pi.rgba.blue - pf.rgba.blue) * interpol;
-    p_aux->rgba.alpha = pf.rgba.alpha + (pi.rgba.alpha - pf.rgba.alpha) * interpol;
+    double hypo = sqrt(pow(deltaX_aux, 2) + pow(deltaY_aux, 2)) / sqrt(pow(delta_x, 2) + pow(delta_y, 2));
+
+    p_aux->rgba.red = pf.rgba.red + r_dist * hypo;
+    p_aux->rgba.green = pf.rgba.green + g_dist * hypo;
+    p_aux->rgba.blue = pf.rgba.blue + b_dist * hypo;
+    p_aux->rgba.alpha = pf.rgba.alpha + a_dist * hypo;
 }
 
 void DrawPixelLineX(pixel_t pi, pixel_t pf){
@@ -55,7 +61,8 @@ void DrawPixelLineX(pixel_t pi, pixel_t pf){
 	}
 
 	while(p.coord.x <= pf.coord.x){
-		PutPixel(p);
+		LinearColorInterpolation(pi, &p, pf);
+        PutPixel(p);
 
 		if(d > 0){ //NE
 			d -= 2 * dx;
@@ -64,7 +71,7 @@ void DrawPixelLineX(pixel_t pi, pixel_t pf){
 
 		d += + 2 * dy; //E
 
-		LinearColorInterpolation(pi, &p, pf);
+		//LinearColorInterpolation(pi, &p, pf);
 
         p.coord.x++;
 	}
@@ -83,7 +90,8 @@ void DrawPixelLineY(pixel_t pi, pixel_t pf){
 	}
 
 	while(p.coord.y <= pf.coord.y){
-		PutPixel(p);
+		LinearColorInterpolation(pi, &p, pf);
+        PutPixel(p);
 
 		if(d > 0){ //NE
 			d -= 2 * dy;
@@ -92,7 +100,7 @@ void DrawPixelLineY(pixel_t pi, pixel_t pf){
 
 		d += 2 * dx; //E
 
-		LinearColorInterpolation(pi, &p, pf);
+		//LinearColorInterpolation(pi, &p, pf);
 
         p.coord.y++;
 	}
@@ -128,15 +136,15 @@ void MyGlDraw(void) {
     //colors_t blue = {.red = 0, .green= 0, .blue = 255, .alpha = 255};
     //colors_t green = {.red = 0, .green= 255, .blue = 0, .alpha = 255};
 
-    pixel_t v1 = SetPixel(250, 50, 255, 0, 0, 255); // red
-    pixel_t v2 = SetPixel(500, 500, 0, 255, 0, 255); // green
-    pixel_t v3 = SetPixel(50, 500, 0, 0, 255, 255); // blue
+    //pixel_t v1 = SetPixel(250, 50, 255, 0, 0, 255); // red
+    //pixel_t v2 = SetPixel(500, 500, 0, 255, 0, 255); // green
+    //pixel_t v3 = SetPixel(50, 500, 0, 0, 255, 255); // blue
     //DrawLine(v1,v2);
 
-    //pi = SetPixel(12, 500, 255, 0, 0, 255);
-    //pf = SetPixel(500, 12, 0, 0, 255, 255);
-    //DrawLine(pi,pf);
-    DrawTriangle(v1, v2, v3);
+    pixel_t pi = SetPixel(12, 500, 255, 0, 0, 255);
+    pixel_t pf = SetPixel(500, 12, 0, 0, 255, 255);
+    DrawLine(pi,pf);
+    //DrawTriangle(v1, v2, v3);
 
 
 }
