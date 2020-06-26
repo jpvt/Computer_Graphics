@@ -42,63 +42,60 @@ void LinearColorInterpolation(pixel_t pi, pixel_t * p_aux, pixel_t pf){
     p_aux->rgba.alpha = pf.rgba.alpha + (pi.rgba.alpha - pf.rgba.alpha) * interpol;
 }
 
-pixel_t DrawPixelLineX(pixel_t pi, pixel_t pf){
-    pixel_t pixel_atual = pi;
+void DrawPixelLineX(pixel_t pi, pixel_t pf){
+    pixel_t p = pi;
+	int incr_y = 1;
+	int dx = pf.coord.x - pi.coord.x;
+	int dy = pf.coord.y - pi.coord.y;
+	int d = 2 * dy - dx;
 
-    int delta_x = pf.coord.x - pi.coord.x;
-    int delta_y = pf.coord.y - pi.coord.y;
+	if(dy < 0){ // Mirror
+		incr_y = -1;
+		dy = -dy;
+	}
 
-    if(delta_y < 0){
-        delta_y = -delta_y;
-    }
+	while(p.coord.x <= pf.coord.x){
+		PutPixel(p);
 
-    int decision = 2 * delta_y - delta_x;
-    int incr_e = 2 * delta_y;
-    int incr_ne = 2 * (delta_y - delta_x);
+		if(d > 0){ //NE
+			d -= 2 * dx;
+			p.coord.y += incr_y;
+		}
 
-    if (p.coord.x < pf.coord.x){
-        PutPixel(p);
-        if(d<=0){
-            d +=incr_e;
-            p.coord.x++;
-        }else{
-            d += incr_ne;
-            p.coord.x++;
-            p.coord.y++;
-        }
-        LinearColorInterpolation(pi, &p, pf);
+		d += + 2 * dy; //E
 
-    }
+		LinearColorInterpolation(pi, &p, pf);
+
+        p.coord.x++;
+	}
 }
 
-pixel_t DrawPixelLineY(pixel_t pi, pixel_t pf){
-    pixel_t pixel_atual = pi;
+void DrawPixelLineY(pixel_t pi, pixel_t pf){
+    pixel_t p = pi;
+	int incr_x = 1;
+	int dx = pf.coord.x - pi.coord.x;
+	int dy = pf.coord.y - pi.coord.y;
+	int d = 2 * dx - dy;
 
-    int delta_x = pf.coord.x - pi.coord.x;
-    int delta_y = pf.coord.y - pi.coord.y;
+	if(dx < 0){ // Mirror
+		incr_x = -1;
+		dx = -dx;
+	}
 
-    if(delta_x < 0){
-        delta_x = -delta_x;
-    }
+	while(p.coord.y <= pf.coord.y){
+		PutPixel(p);
 
-    int decision = 2 * delta_y - delta_x;
-    int incr_e = 2 * delta_y;
-    int incr_ne = 2 * (delta_y - delta_x);
+		if(d > 0){ //NE
+			d -= 2 * dy;
+			p.coord.x +=incr_x;
+		}
 
+		d += 2 * dx; //E
 
-    if (p.coord.y < pf.coord.y){
-        PutPixel(p);
-        if(d<=0){
-            d +=incr_e;
-            p.coord.y++;
-        }else{
-            d += incr_ne;
-            p.coord.x++;
-            p.coord.y++;
-        }
-        LinearColorInterpolation(pi, &p, pf);
+		LinearColorInterpolation(pi, &p, pf);
 
-    }
+        p.coord.y++;
+	}
 }
 
 void DrawLine(pixel_t pi, pixel_t pf){
@@ -126,13 +123,20 @@ void DrawTriangle(pixel_t v1, pixel_t v2, pixel_t v3){
     DrawLine(v3,v1);
 }
 void MyGlDraw(void) {
- 
- //printf("Image Width = %d\nImage Height = %d\n", IMAGE_WIDTH, IMAGE_HEIGHT);
- int x,y;
- printf("Insert coordinates:");
- scanf("%d %d", &x, &y);
- pixel_t pixel = SetPixel(x, y, 255, 0, 255, 255);
- 
- PutPixel(pixel);
+
+    //colors_t red = {.red = 255, .green= 0, .blue = 0, .alpha = 255};
+    //colors_t blue = {.red = 0, .green= 0, .blue = 255, .alpha = 255};
+    //colors_t green = {.red = 0, .green= 255, .blue = 0, .alpha = 255};
+
+    pixel_t v1 = SetPixel(250, 50, 255, 0, 0, 255); // red
+    pixel_t v2 = SetPixel(500, 500, 0, 255, 0, 255); // green
+    pixel_t v3 = SetPixel(50, 500, 0, 0, 255, 255); // blue
+    //DrawLine(v1,v2);
+
+    //pi = SetPixel(12, 500, 255, 0, 0, 255);
+    //pf = SetPixel(500, 12, 0, 0, 255, 255);
+    //DrawLine(pi,pf);
+    DrawTriangle(v1, v2, v3);
+
 
 }
