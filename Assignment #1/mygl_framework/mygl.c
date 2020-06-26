@@ -136,15 +136,11 @@ void MyGlDraw(void) {
     //colors_t blue = {.red = 0, .green= 0, .blue = 255, .alpha = 255};
     //colors_t green = {.red = 0, .green= 255, .blue = 0, .alpha = 255};
 
-    //pixel_t v1 = SetPixel(250, 50, 255, 0, 0, 255); // red
-    //pixel_t v2 = SetPixel(500, 500, 0, 255, 0, 255); // green
-    //pixel_t v3 = SetPixel(50, 500, 0, 0, 255, 255); // blue
-    //DrawLine(v1,v2);
+    pixel_t v1 = SetPixel(250, 12, 255, 0, 0, 255); // red
+    pixel_t v2 = SetPixel(500, 500, 0, 255, 0, 255); // green
+    pixel_t v3 = SetPixel(12, 500, 0, 0, 255, 255); // blue
+    DrawTriangle(v1, v2, v3);
 
-    pixel_t pi = SetPixel(12, 500, 255, 0, 0, 255);
-    pixel_t pf = SetPixel(500, 12, 0, 0, 255, 255);
-    DrawLine(pi,pf);
-    //DrawTriangle(v1, v2, v3);
 
 
 }
