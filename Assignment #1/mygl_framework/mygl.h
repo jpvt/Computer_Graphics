@@ -30,8 +30,8 @@ pixel_t SetPixel(unsigned int x, unsigned int y, unsigned int red, unsigned int 
 void PutPixel(pixel_t pixel);
 void DrawLine(pixel_t pi, pixel_t pf);
 void LinearColorInterpolation((pixel_t pi, pixel_t * p_aux ,pixel_t pf);
-pixel_t DrawPixelLineY(pixel_t pi, pixel_t pf);
-pixel_t DrawPixelLineX(pixel_t pi, pixel_t pf);
+void DrawPixelLineY(pixel_t pi, pixel_t pf);
+void DrawPixelLineX(pixel_t pi, pixel_t pf);
 void DrawTriangle(pixel_t v1, pixel_t v2, pixel_t v3);
 //
 

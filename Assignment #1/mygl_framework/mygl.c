@@ -42,6 +42,89 @@ void LinearColorInterpolation(pixel_t pi, pixel_t * p_aux, pixel_t pf){
     p_aux->rgba.alpha = pf.rgba.alpha + (pi.rgba.alpha - pf.rgba.alpha) * interpol;
 }
 
+pixel_t DrawPixelLineX(pixel_t pi, pixel_t pf){
+    pixel_t pixel_atual = pi;
+
+    int delta_x = pf.coord.x - pi.coord.x;
+    int delta_y = pf.coord.y - pi.coord.y;
+
+    if(delta_y < 0){
+        delta_y = -delta_y;
+    }
+
+    int decision = 2 * delta_y - delta_x;
+    int incr_e = 2 * delta_y;
+    int incr_ne = 2 * (delta_y - delta_x);
+
+    if (p.coord.x < pf.coord.x){
+        PutPixel(p);
+        if(d<=0){
+            d +=incr_e;
+            p.coord.x++;
+        }else{
+            d += incr_ne;
+            p.coord.x++;
+            p.coord.y++;
+        }
+        LinearColorInterpolation(pi, &p, pf);
+
+    }
+}
+
+pixel_t DrawPixelLineY(pixel_t pi, pixel_t pf){
+    pixel_t pixel_atual = pi;
+
+    int delta_x = pf.coord.x - pi.coord.x;
+    int delta_y = pf.coord.y - pi.coord.y;
+
+    if(delta_x < 0){
+        delta_x = -delta_x;
+    }
+
+    int decision = 2 * delta_y - delta_x;
+    int incr_e = 2 * delta_y;
+    int incr_ne = 2 * (delta_y - delta_x);
+
+
+    if (p.coord.y < pf.coord.y){
+        PutPixel(p);
+        if(d<=0){
+            d +=incr_e;
+            p.coord.y++;
+        }else{
+            d += incr_ne;
+            p.coord.x++;
+            p.coord.y++;
+        }
+        LinearColorInterpolation(pi, &p, pf);
+
+    }
+}
+
+void DrawLine(pixel_t pi, pixel_t pf){
+    int abs_deltaX = abs(pf.coord.x - pi.coord.x);
+    int abs_deltaY = abs(pf.coord.y - pi.coord.y);
+    
+    if(abs_deltaX > abs_deltaY){
+        if(pf.coord.x > pi.coord.x){
+            DrawPixelLineX(pi, pf);
+        }else{
+            DrawPixelLineX(pf, pi);
+        }
+    }else{
+        if(pf.coord.y > pi.coord.y){
+            DrawPixelLineY(pi, pf);
+        }else{
+            DrawPixelLineY(pf, pi);
+        }
+    }
+}
+
+void DrawTriangle(pixel_t v1, pixel_t v2, pixel_t v3){
+    DrawLine(v1,v2);
+    DrawLine(v2,v3);
+    DrawLine(v3,v1);
+}
 void MyGlDraw(void) {
  
  //printf("Image Width = %d\nImage Height = %d\n", IMAGE_WIDTH, IMAGE_HEIGHT);
