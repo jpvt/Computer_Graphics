@@ -358,9 +358,40 @@ The Linear Color Interpolation Algorithm consists of interpolating the colors be
 <img src="imgs/color_line_polar.png" >
 </p>
 <p align="center">
-<sub>Figure 21. DrawLine + LinearColortIntepolation in action</sub>
+<sub>Figure 23. DrawLine + LinearColortIntepolation in action</sub>
 </p>
 
 ---
 
 ## Drawing a triangle
+
+The most difficult part of the assignment is done. For drawing a triangle on the screen we just need to draw three lines with common vertices. To do so, I've created the following function :
+
+<p align="center">
+<img src="imgs/drawTriangle.png" >
+</p>
+<p align="center">
+<sub>Figure 24. DrawTriangle Function</sub>
+</p>
+
+And that was the result:
+
+<p align="center">
+<img src="imgs/color_triangle_inter.png" >
+</p>
+<p align="center">
+<sub>Figure 25. DrawTriangle in action</sub>
+</p>
+
+---
+## Difficulties
+
+The main difficulty in this assignment was to adapt the midpoint algorithm to all octants on the DrawLine function. I also had some bugs with the Linear Color Interpolation algorithm, but after a few minutes it was solved.
+
+---
+
+## Credits
+
+ * https://www.cs.helsinki.fi/group/goa/mallinnus/lines/bresenh.html
+ * https://en.wikipedia.org/wiki/Digital_image
+ * Prof. Christian Notes
