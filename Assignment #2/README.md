@@ -46,3 +46,14 @@ $ make clean
 ```
 $ ./moderngl_hello_world
 ```
+
+## Example
+
+<p align="center">
+<strong>The result should be something like this:</strong>
+<p align="center">
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ug2uIIbkVcU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
