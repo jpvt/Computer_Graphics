@@ -130,16 +130,48 @@ void DrawTriangle(pixel_t v1, pixel_t v2, pixel_t v3){
     DrawLine(v2,v3);
     DrawLine(v3,v1);
 }
+
+void DrawCustomTriangle(){
+    pixel_t pxl1 = SetPixel(100, 300, 255, 0, 0, 0);
+    pixel_t pxl2 = SetPixel(200, 150, 0, 0, 255, 0);
+
+    pixel_t pxl3 = SetPixel(400, 300, 0, 255, 0, 0);
+    pixel_t pxl4 = SetPixel(300, 150, 0, 0, 255, 0);
+
+    pixel_t pxl5 = SetPixel(150, 450, 255, 0, 0, 0);
+    pixel_t pxl6 = SetPixel(350, 450, 0, 255, 0, 0);
+
+    pixel_t pxl7 = SetPixel(100, 400, 255, 0, 0, 0);
+    pixel_t pxl8 = SetPixel(400, 400, 0, 255, 0, 0);
+    pixel_t pxl9 = SetPixel(250, 150, 0, 0, 255, 0);
+
+    DrawLine(pxl1,pxl2);
+    DrawLine(pxl3,pxl4);
+    DrawLine(pxl5,pxl6);
+
+    DrawTriangle(pxl7, pxl8, pxl9);
+
+}
+
+void DrawColoredFrame(){
+    pixel_t pxl1 = SetPixel(50, 50, 0, 0, 255, 0);//blue
+    pixel_t pxl2 = SetPixel(462, 50, 255, 0, 0, 0);//red
+    pixel_t pxl3 = SetPixel(462, 462, 0, 0, 255, 0);//blue
+    pixel_t pxl4 = SetPixel(50, 462, 255, 0, 0, 0); //red
+
+    DrawLine(pxl1,pxl2);
+    DrawLine(pxl2,pxl3);
+    DrawLine(pxl3,pxl4);
+    DrawLine(pxl4,pxl1);
+
+
+}
+
+
 void MyGlDraw(void) {
 
-    //colors_t red = {.red = 255, .green= 0, .blue = 0, .alpha = 255};
-    //colors_t blue = {.red = 0, .green= 0, .blue = 255, .alpha = 255};
-    //colors_t green = {.red = 0, .green= 255, .blue = 0, .alpha = 255};
-
-    pixel_t v1 = SetPixel(250, 12, 255, 0, 0, 255); // red
-    pixel_t v2 = SetPixel(500, 500, 0, 255, 0, 255); // green
-    pixel_t v3 = SetPixel(12, 500, 0, 0, 255, 255); // blue
-    DrawTriangle(v1, v2, v3);
+    DrawColoredFrame();
+    DrawCustomTriangle();
 
 
 

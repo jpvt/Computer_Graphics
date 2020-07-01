@@ -33,6 +33,8 @@ void LinearColorInterpolation(pixel_t pi, pixel_t * p_aux ,pixel_t pf);
 void DrawPixelLineY(pixel_t pi, pixel_t pf);
 void DrawPixelLineX(pixel_t pi, pixel_t pf);
 void DrawTriangle(pixel_t v1, pixel_t v2, pixel_t v3);
+void DrawCustomTriangle();
+void DrawColoredFrame();
 //
 
 #endif  // MYGL_H
