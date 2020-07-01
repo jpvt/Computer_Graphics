@@ -21,10 +21,10 @@ In this assignment, I implemented algorithms for the rasterization of points and
 
 *  [Assignment #2: Setting up OpenGL](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%232)
 
-<p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ug2uIIbkVcU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=Ug2uIIbkVcU"><img src="https://img.youtube.com/vi/Ug2uIIbkVcU/0.jpg" alt="Modern OpenGL"></a>
+</div>
 
 <p align="center">
-In this assignment, I'll show how to set up Modern OpenGL on Linux and how to run a simple image.
+In this assignment, I'll show how to set up Modern OpenGL on Linux and how to run a simple image. Click on the image to check the video.
 </p>

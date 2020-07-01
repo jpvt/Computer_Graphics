@@ -51,9 +51,13 @@ $ ./moderngl_hello_world
 
 <p align="center">
 <strong>The result should be something like this:</strong>
-<p align="center">
+</p>
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=Ug2uIIbkVcU"><img src="https://img.youtube.com/vi/Ug2uIIbkVcU/0.jpg" alt="Modern OpenGL"></a>
+</div>
 
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ug2uIIbkVcU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Click on the image to check de video
 </p>
 
