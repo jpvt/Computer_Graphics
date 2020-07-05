@@ -33,7 +33,7 @@ Repository dedicated to the assignments developed at Introduction to Computer Gr
  *  [Assignment #1: Introduction to Rasterization Algorithms](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%231)
 
 <p align="center">
-<img src="imgs/color_triangle_inter.png" >
+<img src="https://github.com/jpvt/jpvt.github.io/blob/master/assets/img/rasterization/initial_img.png" >
 </p>
 
 <p align="center">
