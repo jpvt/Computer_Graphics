@@ -61,12 +61,12 @@ In this assignment, I'll show how to set up Modern OpenGL on Linux and how to ru
 
 ## Author
 
- <a href="https://www.linkedin.com/in/jpvt/" target="_blank">**João Pedro Vasconcelos**</a>
+<a href="https://www.linkedin.com/in/jpvt/" target="_blank">**João Pedro Vasconcelos**</a>
 :---: 
 <img src="imgs/author.JPG" width="200px"> </img>
 <a href="http://github.com/jpvt" target="_blank">`github.com/jpvt`</a>
 
-<sub>*Computer Engineering undergrad* at Universidade Federal da Paraíba</sub>
+<sub>*Computer Engineering undergrad student* at Universidade Federal da Paraíba</sub>
 
 Hey, I'm João Pedro. (Since it's a complicated name to pronounce in english, you can call me JP)
 
@@ -91,6 +91,7 @@ Reach out to me at one of the following places!
 - Email `joaoteixeira@eng.ci.ufpb.br` 
 - Linkedin at <a href="https://www.linkedin.com/in/jpvt/" target="_blank">`jpvt`</a>
 
+--- 
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
