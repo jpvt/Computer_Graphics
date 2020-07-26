@@ -93,7 +93,7 @@ In the canonical space perspective distortions were applied to the space, to cau
 In the screen space, the canonical space pixels are addressed through the screen, then we can see a 3-dimensional transformed into a 2-dimensional image.
 
 <p align="center">
-  <img src="imgs/clipSpace.png" >
+  <img src="imgs/screenSpace.png" >
 </p>
 
 <p align="center">
