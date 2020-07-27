@@ -166,7 +166,7 @@ With Cartesian components (x,y):
 For example, the matrix that increases x and y uniformly by a factor of two is:
 
 <p align="center">
-  <img src="https://latex.codecogs.com/gif.latex?%5Cinline%20scale%282.0%2C2.0%29%20%3D%20%5Cbegin%7Bbmatrix%7D%202.0%20%26%200%20%5C%5C%200%20%26%202.0%20%5Cend%7Bbmatrix%7D >
+  <img src="https://latex.codecogs.com/gif.latex?%5Cinline%20scale%282.0%2C2.0%29%20%3D%20%5Cbegin%7Bbmatrix%7D%202.0%20%26%200%20%5C%5C%200%20%26%202.0%20%5Cend%7Bbmatrix%7D" >
 </p>
 
 
