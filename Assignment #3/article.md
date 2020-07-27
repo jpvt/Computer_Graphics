@@ -5,6 +5,8 @@
 
 In this assignment, I will implement geometric transformations that make up the structure of the graphic pipeline. This implementation will be done with the help of the GLM library and its execution will occur in the OpenGL shaders. This activity will be done from a C++ template code provided by the professor, which is available in the [course's repository](https://github.com/capagot/icg).
 
+---
+
 ## **Introduction**
 
 In the context of computer graphics, the graphics pipeline is a conceptual model that describes what steps a graphics system needs to perform to render a 3D scene to a 2D screen. It consists of a series of algebraic transformations that are divided into a few stages. In this article, I will explain all the steps of the graphics pipeline and demonstrate them with some code.
@@ -100,6 +102,76 @@ In the screen space, the canonical space pixels are addressed through the screen
     <sub>Figure 8. Representation of a transformation to the Screen Space</sub>
 </p>
 
+---
+
+## **Geometric Transformations**
+
+To go through the graphics pipeline, geometric transformations are made from one space to another. Most of these transformations are made by a linear operator, which in this case will be a matrix over the vectors that compose an object, transforming them from one vector space to another. The main transformations that will be covered in this article are:
+
+* Scale;
+* Shear;
+* Rotation;
+* Translatation.
+
+Geometric transformations can be classified as:
+
+* **Linear transformations:**
+  - Maps straight lines to straight lines;
+  - Can be expressed in matrix form;
+  - Examples:
+    * Scale, rotation and shear.
+  
+* **Affine transformations:**
+  - Include all linear transformations;
+  - Preserves parallelism between lines;
+  - Examples:
+    * Scale, rotation, shear and *translation*.
+
+* **Projective transformations:**
+  - Include all affine transformations;
+  - Keep straight lines straight;
+  - Do not preserve parallelism between lines;
+  - Examples:
+    * Scale, rotation, shear, translation and *homogeneous projection*. 
+
+<p align="center">
+  <img src="imgs/classTrans.png" >
+</p>
+<p align="center">
+    <sub>Figure 9. Geometric transformation Classification</sub>
+</p>
+
+
+### **Scaling**
+
+<p align="center">
+  <img src="imgs/classTrans.png" >
+</p>
+<p align="center">
+    <sub>Figure 10. Basic 2D scaling</sub>
+</p>
+
+The most basic transform is a *scale*. This transform can change length and possibly direction:
+
+<p align="center">
+  <img src="imgs/scaleMat.png" >
+</p>
+
+With Cartesian components (x,y):
+
+<p align="center">
+  <img src="imgs/cartMat.png" >
+</p>
+
+For example, the matrix that increases x and y uniformly by a factor of two is:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/gif.latex?%5Cinline%20scale%282.0%2C2.0%29%20%3D%20%5Cbegin%7Bbmatrix%7D%202.0%20%26%200%20%5C%5C%200%20%26%202.0%20%5Cend%7Bbmatrix%7D >
+</p>
+
+
 ## **Credits**
 
 * [Graphics Pipeline Wikipedia](https://en.wikipedia.org/wiki/Graphics_pipeline)
+* [Pipeline Gráfico - Raul Britto](http://raulbritto.blogspot.com/2016/10/pipeline-grafico.html)
+* [Chapter 6 - Fundamentals of Computer Graphics - Peter Shirley](https://www.amazon.com.br/dp/B009TG9NIQ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1s)
