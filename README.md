@@ -9,8 +9,10 @@ Repository dedicated to the assignments developed at Introduction to Computer Gr
 ---
 
 ## Table of Contents
-- [Books](#books)
-- [Assignments](#Assignments)
+- [Table of Contents](#table-of-contents)
+- [Books:](#books)
+- [* ROGERS, David; ADAMS, J. Alan. Mathematical elements for computer graphics. New York: McGraw-Hill, 1990](#ullirogers-david-adams-j-alan-mathematical-elements-for-computer-graphics-new-york-mcgraw-hill-1990liul)
+- [Assignments:](#assignments)
 - [Clone](#clone)
 - [Author](#author)
 - [Support](#support)
@@ -53,7 +55,9 @@ In this assignment, I'll show how to set up Modern OpenGL on Linux and how to ru
 
 *  [Assignment #3: The Graphics Pipeline](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%233) (UNDER CONSTRUCTION)
 
-
+<p align="center">
+  <img src="imgs/assign3cover,gif" >
+</p>
 
 <p align="center">
 In this assignment, I will implement geometric transformations that make up the structure of the graphic pipeline. This implementation will be done with the help of the GLM library and its execution will occur in the OpenGL shaders..
