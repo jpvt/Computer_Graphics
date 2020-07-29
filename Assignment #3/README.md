@@ -176,7 +176,7 @@ The result is:
   <img src="imgs/quest2.png" >
 </p>
 <p align="center">
-    <sub>Figure 17. Exercise 1 result</sub>
+    <sub>Figure 17. Exercise 2 result</sub>
 </p>
 
 Note that:
@@ -190,6 +190,36 @@ is equal to:
 <p align="center">
   <img src="imgs/exmpcode.png" >
 </p>
+
+## Exercise 3: Perspective Projection
+
+In this exercise, I had to modify the projection matrix so that it considers the
+camera at the origin of its coordinate system and that *d* is the distance from the projection center to the origin of the camera's coordinate system. *d* is equal to **0.5**.
+
+<p align="center">
+  <img src="imgs/mproj.png" >
+</p>
+
+Then, by modifying the Matrix projection as specified in the exercise:
+
+
+<p align="center">
+  <img src="imgs/code3.png" >
+</p>
+<p align="center">
+    <sub>Figure 18. Matrix projection modification in code </sub>
+</p>
+
+The result is:
+
+<p align="center">
+  <img src="imgs/quest3.png" >
+</p>
+<p align="center">
+    <sub>Figure 19. Exercise 3 result</sub>
+</p>
+
+
 
 ## **Credits**
 
