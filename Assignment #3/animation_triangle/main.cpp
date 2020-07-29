@@ -29,6 +29,8 @@ unsigned int shader_program;
 unsigned int vbo; // Vertex buffer object ID
 unsigned int vao; // Vertex array object ID
 
+float rotateY = 0.0;
+
 //********************************************************************************************************************
 // A função LoadShader() é baseada em https://stackoverflow.com/a/174552/6107321
 void LoadShader(char* file_name, char** shader_source) {
@@ -66,19 +68,30 @@ void Display(void) {
 
     // Matriz Model ///////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
-    float model_array[16] = {0.5f, 0.0f, 0.0f, 0.0f, 
-                             0.0f, 0.5f, 0.0f, 0.0f, 
+    float model_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
+                             0.0f, 1.0f, 0.0f, 0.0f, 
                              0.0f, 0.0f, 1.0f, 0.0f, 
                              0.0f, 0.0f, 0.0f, 1.0f};
-    glm::mat4 model_mat = glm::make_mat4(model_array);
+    glm::mat4 model_free_mat = glm::make_mat4(model_array);
+
+    // Rotate Matrix
+    glm::mat4 rotate_matrix = glm::mat4(glm::vec4(glm::cos(rotateY), 0, -glm::sin(rotateY), 0),
+                                glm::vec4(0, 1, 0, 0),
+                                glm::vec4(glm::sin(rotateY), 0, glm::cos(rotateY), 0),
+                                glm::vec4(0, 0, 0, 1));
+
+    rotateY += 0.01;
+
+
+    glm::mat4 model_mat = model_free_mat * rotate_matrix;
 
     // Matriz View ////////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
 
     // Parameters:
     glm::vec3 camera_target = glm::vec3(0.0f, 0.0f, 0.0f);
-    glm::vec3 camera_pos    = glm::vec3(-1.0f, 1.0f, 1.0f);
-    glm::vec3 camera_up     =  glm::vec3(1.0f, 0.0f, 0.0f);
+    glm::vec3 camera_pos    = glm::vec3(0.0f, 0.0f, 5.0f);
+    glm::vec3 camera_up     =  glm::vec3(0.0f, 1.0f, 0.0f);
 
     glm::vec3 camera_z = -glm::normalize(camera_target - camera_pos);
     glm::vec3 camera_x = glm::normalize(glm::cross(camera_up, camera_z));
@@ -107,10 +120,13 @@ void Display(void) {
 
     // Matriz Projection //////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
+
+    float d = 3.0f;
+
     float proj_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
                             0.0f, 1.0f, 0.0f, 0.0f, 
-                            0.0f, 0.0f, 1.0f, -0.5f, 
-                            0.0f, 0.0f, 2.0f, 1.0f};
+                            0.0f, 0.0f, 1.0f, -1/d, 
+                            0.0f, 0.0f, d, 1.0f};
 
     glm::mat4 proj_mat = glm::make_mat4(proj_array);
 
