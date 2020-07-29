@@ -56,7 +56,7 @@ In this assignment, I'll show how to set up Modern OpenGL on Linux and how to ru
 *  [Assignment #3: The Graphics Pipeline](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%233) (UNDER CONSTRUCTION)
 
 <p align="center">
-  <img src="imgs/assign3cover,gif" >
+  <img src="imgs/cover3.gif" >
 </p>
 
 <p align="center">
