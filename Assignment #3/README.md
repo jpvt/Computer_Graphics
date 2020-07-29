@@ -143,6 +143,54 @@ The result is:
     <sub>Figure 15. Exercise 1 result</sub>
 </p>
 
+## Exercise 2: Translation
+
+In this exercise, I had to modify the Matrix model with the following translation:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/gif.latex?%28x%2C%20y%2C%20z%29%20%3D%20%281%2C%200%2C%200%29" >
+</p>
+
+The translation is an affine transformation, so to do it, it is necessary to modify the homogeneous coordinate.
+
+<p align="center">
+  <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D%20x%27%5C%5C%20y%27%5C%5C%20z%27%5C%5C%201%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%201%20%260%20%260%20%26T_x%20%5C%5C%200%26%201%20%260%20%26T_y%20%5C%5C%200%26%200%26%201%26T_z%20%5C%5C%200%26%200%26%200%20%261%20%5Cend%7Bbmatrix%7D%20%5Ccdot%20%5Cbegin%7Bbmatrix%7D%20x%5C%5C%20y%5C%5C%20z%5C%5C%201%20%5Cend%7Bbmatrix%7D" >
+</p>
+
+Then, by modifying the Matrix model with the values specified in the exercise:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D%20x%27%5C%5C%20y%27%5C%5C%20z%27%5C%5C%201%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%201%20%260%20%260%20%261%20%5C%5C%200%26%201%20%260%20%260%20%5C%5C%200%26%200%26%201%260%20%5C%5C%200%26%200%26%200%20%261%20%5Cend%7Bbmatrix%7D%20%5Ccdot%20%5Cbegin%7Bbmatrix%7D%20x%5C%5C%20y%5C%5C%20z%5C%5C%201%20%5Cend%7Bbmatrix%7D" >
+</p>
+
+<p align="center">
+  <img src="imgs/code2.png" >
+</p>
+<p align="center">
+    <sub>Figure 16. Matrix model modification in code for exercise 2</sub>
+</p>
+
+The result is:
+
+<p align="center">
+  <img src="imgs/quest2.png" >
+</p>
+<p align="center">
+    <sub>Figure 17. Exercise 1 result</sub>
+</p>
+
+Note that:
+
+<p align="center">
+  <img src="imgs/exmp.png" >
+</p>
+
+is equal to:
+
+<p align="center">
+  <img src="imgs/exmpcode.png" >
+</p>
+
 ## **Credits**
 
 * [Graphics Pipeline Wikipedia](https://en.wikipedia.org/wiki/Graphics_pipeline)
