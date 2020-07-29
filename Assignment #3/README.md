@@ -219,6 +219,80 @@ The result is:
     <sub>Figure 19. Exercise 3 result</sub>
 </p>
 
+## Exercise 4: Camera Position
+
+In this exercise, I had to keep the modifications in the Matrix projection made in the previous exercise and modify the Matrix View so that the image results equal to the image below. 
+
+<p align="center">
+  <img src="imgs/objective.png" >
+</p>
+<p align="center">
+    <sub>Figure 20. Camera position = (-0.1, 0.1, 0.25); Camera Up = (0, 1, 0), Camera target = (0, 0, 0)</sub>
+</p>
+
+To define a camera which will capture the scene we want, it is necessary to define its axes through the information that is necessary to generate it. That is:
+
+* Camera position: The point relative to its position;
+* Camera Target: the point where it is looking;
+* Direction: The distance between target and position;
+* Vector UP: a vector that represents what it would be to "lookup" in the Universe Space, which, in this case, it is taken to be equal to the unit vector that represents the y-axis of the Universe.
+
+<p align="center">
+  <img src="https://latex.codecogs.com/gif.latex?%5C%5CPosition%20%3D%20%28p_x%2C%20p_y%2C%20p_z%29%5C%5C%20Target%20%3D%20%28l_x%2C%20l_y%2C%20l_z%29%5C%5C%20Direction%20%3D%20%28l_x%20-%20p_x%2C%20l_y%20-%20p_y%2C%20l_z%20-%20p_z%29%5C%5C%20VectorUP%20%3D%20%28u_x%2C%20u_y%2C%20u_z%29" >
+</p>
+
+**Defining the axis**:
+
+Each axis can be calculated with the following:
+
+<p align="center">
+  <img src="imgs/axisView.png" >
+</p>
+
+<p align="center">
+  <img src="imgs/axisExmp.png" >
+</p>
+
+After this procedure, it is necessary to build the matrices that will form the View.
+
+* **Matrix B:**
+Represents the Universe coordinate system points in the new system related to Camera Space.
+
+<p align="center">
+  <img src="imgs/matrixB.png" >
+</p>
+
+* **Matrix T:**
+Used to translate all vertices with the position point to position the camera at the origin.
+
+<p align="center">
+  <img src="imgs/matrixT.png" >
+</p>
+
+* **Matrix View:**
+To combine such matrices and generate the Matrix view, it is only necessary to multiply one by the other.
+
+<p align="center">
+  <img src="imgs/mview.png" >
+</p>
+
+By doing this modifications in code:
+
+<p align="center">
+  <img src="imgs/code4.png" >
+</p>
+<p align="center">
+    <sub>Figure 21. Matrix view modification in code </sub>
+</p>
+
+The result is:
+
+<p align="center">
+  <img src="imgs/quest4.png" >
+</p>
+<p align="center">
+    <sub>Figure 22. Exercise 4 result</sub>
+</p>
 
 
 ## **Credits**
