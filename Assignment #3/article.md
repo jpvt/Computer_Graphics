@@ -145,7 +145,7 @@ Geometric transformations can be classified as:
 ### **Scaling**
 
 <p align="center">
-  <img src="imgs/classTrans.png" >
+  <img src="imgs/scale.png" >
 </p>
 <p align="center">
     <sub>Figure 10. Basic 2D scaling</sub>
@@ -168,6 +168,8 @@ For example, the matrix that increases x and y uniformly by a factor of two is:
 <p align="center">
   <img src="https://latex.codecogs.com/gif.latex?%5Cinline%20scale%282.0%2C2.0%29%20%3D%20%5Cbegin%7Bbmatrix%7D%202.0%20%26%200%20%5C%5C%200%20%26%202.0%20%5Cend%7Bbmatrix%7D" >
 </p>
+
+Scaling affects the dimensions of an object so that each coordinate of a vector **A** is multiplied by its scalars. So this transformation can change the length and even direction of a vector.
 
 
 ## **Credits**
