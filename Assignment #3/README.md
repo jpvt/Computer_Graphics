@@ -243,7 +243,7 @@ To define a camera which will capture the scene we want, it is necessary to defi
 
 **Defining the axis**:
 
-Each axis can be calculated with the following:
+Each axis can be calculated as follows:
 
 <p align="center">
   <img src="imgs/axisView.png" >
