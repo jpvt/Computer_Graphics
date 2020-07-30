@@ -71,6 +71,7 @@ Geometric transformations can be classified as:
 
 The activity consists of changing, in the template program, the contents of the MModel, MView, and MProjection matrices so that the program generates the images specified in each exercise. This assignment uses only the scene described below.
 
+---
 
 ## Scene
 The scene consists of two triangles (red and blue), with the red triangle slightly ahead of the blue triangle concerning the camera.
@@ -107,6 +108,8 @@ The geometric configuration of the rendered scene can be seen in the following i
     <sub>Figure 13. ZY plane (negative X axis into the image plane)</sub>
 </p>
 
+---
+
 ## Exercise 1: Scale
 
 In this exercise, I had to modify the Matrix model with the following scale factors: 
@@ -142,6 +145,8 @@ The result is:
 <p align="center">
     <sub>Figure 15. Exercise 1 result</sub>
 </p>
+
+---
 
 ## Exercise 2: Translation
 
@@ -191,6 +196,8 @@ is equal to:
   <img src="imgs/exmpcode.png" >
 </p>
 
+---
+
 ## Exercise 3: Perspective Projection
 
 In this exercise, I had to modify the projection matrix so that it considers the
@@ -218,6 +225,8 @@ The result is:
 <p align="center">
     <sub>Figure 19. Exercise 3 result</sub>
 </p>
+
+---
 
 ## Exercise 4: Camera Position
 
@@ -293,6 +302,54 @@ The result is:
 <p align="center">
     <sub>Figure 22. Exercise 4 result</sub>
 </p>
+
+---
+
+## Exercise 5: Free Transformations
+
+In this exercise, I had to modify the Model, View, and Projection matrices to create a different scene from the ones previously generated.
+
+* **Matrix Model**
+
+Since I wanted to show the figure changing dynamically in a rotation around the Y-axis, I've created a rotation matrix and defined rotation of 0.01º for each frame.
+
+<p align="center">
+  <img src="imgs/model5code.png" >
+</p>
+<p align="center">
+    <sub>Figure 23. Matrix model modification in code for exercise 5</sub>
+</p>
+
+* **Matrix View**
+I've modified the position of the camera so that it was centered and slightly above the x-axis.
+
+<p align="center">
+  <img src="imgs/model5code.png" >
+</p>
+<p align="center">
+    <sub>Figure 24. Matrix view parameters modification in code for exercise 5</sub>
+</p>
+
+* **Matrix Projection**
+
+I've set *d* equal to 4.0, to enlarge the scene in the image projection.
+
+<p align="center">
+  <img src="imgs/pjn.png" >
+</p>
+<p align="center">
+    <sub>Figure 24. Matrix projection modification in code for exercise 5</sub>
+</p>
+
+### **The Final Result**
+
+<p align="center">
+  <img src="https://github.com/jpvt/Computer_Graphics/blob/master/imgs/cover3.gif" >
+</p>
+<p align="center">
+    <sub>Figure 25. Exercise 5 Final Result</sub>
+</p>
+
 
 
 ## **Credits**

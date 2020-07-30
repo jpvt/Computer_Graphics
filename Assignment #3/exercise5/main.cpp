@@ -85,25 +85,19 @@ void ChangeColors(){
     }
 
     
-    for(int i = 0; i < 3; i++)
+    for(int i = 0; i < 3; i++){
         vertices[3+j*i] = closer_red;
-
-    for(int i = 0; i < 3; i++)
         vertices[4+j*i] = closer_green;
-
-    for(int i = 0; i < 3; i++)
         vertices[5+j*i] = closer_blue;
+    }
 
 
 
-    for(int i = 0; i < 3; i++)
+    for(int i = 0; i < 3; i++){
         vertices[21+j*i] = farther_red;
-
-    for(int i = 0; i < 3; i++)
         vertices[22+j*i] = farther_green;
-
-    for(int i = 0; i < 3; i++)
         vertices[23+j*i] = farther_blue;
+    }
 
 
     // Carrega as propriedades (coordenadas + cores) dos vértices no VBO
@@ -175,7 +169,7 @@ void Display(void) {
                                 glm::vec4(0, 0, 0, 1));
 
     rotateY += 0.01;
-
+    
     ChangeColors(); 
 
     glm::mat4 model_mat = model_free_mat * rotate_matrix;
