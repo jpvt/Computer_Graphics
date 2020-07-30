@@ -354,6 +354,29 @@ As an additional modification, I made a function to change the colors of the tri
     <sub>Figure 25. Exercise 5 Final Result</sub>
 </p>
 
+---
+
+## **Discussion and difficulties about the assignment**
+
+This task was very good to learn efficiently about how the graphics pipeline works and a good introduction to OpenGL. The greatest difficulty I've found was changing the colors dynamically. I've had strange bugs like triangles disappearing in the middle of the animation, but that was quickly solved after a few minutes of debugging.
+
+However, I had a few difficulties in the exercises, but most were because of inattentive while building the new matrices, as in this case:
+
+<p align="center">
+  <img src="imgs/codeError.png" >
+</p>
+
+<p align="center">
+    <sub>Figure 26. Code with error</sub>
+</p>
+
+<p align="center">
+  <img src="imgs/error.png" >
+</p>
+
+<p align="center">
+    <sub>Figure 27. Result of error</sub>
+</p>
 
 
 ## **Credits**
@@ -361,3 +384,4 @@ As an additional modification, I made a function to change the colors of the tri
 * [Graphics Pipeline Wikipedia](https://en.wikipedia.org/wiki/Graphics_pipeline)
 * [Pipeline Gráfico - Raul Britto](http://raulbritto.blogspot.com/2016/10/pipeline-grafico.html)
 * [Chapter 6 - Fundamentals of Computer Graphics - Peter Shirley](https://www.amazon.com.br/dp/B009TG9NIQ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1s)
+* Prof. Christian Notes
