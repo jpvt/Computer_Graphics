@@ -8,11 +8,26 @@ In this assignment, I will implement geometric transformations that make up the 
 NOTE: This is the short version of the assignment's article. If you want the long version explaining details about the graphics pipeline, please access the [long version](article.md) (**UNDER CONSTRUCTION**).
 
 ---
-## **Dependencies and Compilation Instructions**
+## **Dependencies**
 
 All requirements for this assignment are described in [Assignment #2 README](https://github.com/jpvt/Computer_Graphics/blob/master/Assignment%20%232/README.md). Check it out!
 
-The compilation instructions are described in the README of the respective code folders.
+## **Compilation Instructions**
+
+**Compilation**
+```
+$ make
+```
+
+**Cleaning**
+```
+$ make clean
+```
+
+**Run**
+```
+$ ./transform_gl
+```
 
 ---
 ## **Introduction**
