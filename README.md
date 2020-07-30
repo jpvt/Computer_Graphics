@@ -53,7 +53,7 @@ In this assignment, I implemented algorithms for the rasterization of points and
 In this assignment, I'll show how to set up Modern OpenGL on Linux and how to run a simple image. Click on the image to check the video.
 </p>
 
-*  [Assignment #3: The Graphics Pipeline](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%233) (UNDER CONSTRUCTION)
+*  [Assignment #3: The Graphics Pipeline](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%233)
 
 <p align="center">
   <img src="imgs/cover3.gif" >
