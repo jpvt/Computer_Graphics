@@ -341,6 +341,10 @@ I've set *d* equal to 4.0, to enlarge the scene in the image projection.
     <sub>Figure 24. Matrix projection modification in code for exercise 5</sub>
 </p>
 
+* **Additional Modifications**
+As an additional modification, I made a function to change the colors of the triangles for each frame in the animation. It was the part that I had the most difficulty in the project because I had to read a lot about changing the OpenGL vbo and had many errors in this process.
+
+
 ### **The Final Result**
 
 <p align="center">
