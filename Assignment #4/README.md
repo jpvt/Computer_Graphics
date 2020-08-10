@@ -154,4 +154,6 @@ This assignment was relatively simple, I've found no difficulty or complication 
 ## **Credits**
 
 * [Basic Lighting OpenGL](https://learnopengl.com/Lighting/Basic-Lighting#:~:text=Lighting%2FBasic-Lighting&text=These%20lighting%20models%20are%20based,ambient%2C%20diffuse%20and%20specular%20lighting.)
+* [GSLS Tutorial - Diffuse Lighting](https://www.lighthouse3d.com/tutorials/glsl-tutorial/directional-lights/)
+* [GSLS Tutorial - Specular Lighting](https://www.lighthouse3d.com/tutorials/glsl-tutorial/directional-lights-per-vertex-ii/)
 * Prof. Christian Notes
