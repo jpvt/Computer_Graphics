@@ -26,11 +26,11 @@ void main() {
     vec3 V = normalize( cam_pos - ( model_mat * vec4 ( obj_spc_vertex_pos , 1.0) ).xyz);
     
     int n = 64;
-    float cos_t = dot(L,N);  
-    float cos_a = max(dot(R,V), 0.0);
-    float pow_cos_a = pow(cos_a, n);
+    float cos_theta = dot(L,N);  
+    float cos_alpha = max(dot(R,V), 0.0);
+    float pow_cos_alpha = pow(cos_alpha, n);
     
-    I = (I_a*k_a) + (I_p*(k_d*cos_t + k_s*pow_cos_a));
+    I = (I_a*k_a) + (I_p*(k_d*cos_theta + k_s*pow_cos_alpha));
 
     gl_Position = proj_mat * view_mat * model_mat * vec4(obj_spc_vertex_pos, 1.0);
 }

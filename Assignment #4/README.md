@@ -72,7 +72,7 @@ The scene to be rendered in this activity consists of a mesh of triangles repres
 
 ## Exercise 1: Diffuse lighting
 
-I had to modify the vertex shader, so that it starts to include, in addition to the ambient lighting model, the diffuse model. 
+In this exercise, I had to modify the vertex shader, so that it starts to include, in addition to the ambient lighting model, the diffuse model. 
 
 Therefore, it will be necessary to calculate the new value of the normal vector N, after the transformations made by the Model matrix, as well as the vector L that points from the vertex to the light source.
 
@@ -100,7 +100,7 @@ After the modifications in the template code, the result was:
   <img src="imgs/result1.png" >
 </p>
 <p align="center">
-    <sub>Figure 4. Exercise 1 Result, Diffuse lighting</sub>
+    <sub>Figure 5. Exercise 1 Result, Diffuse lighting</sub>
 </p>
 
 The scene with the Ambient and Diffuse lighting combined.
@@ -109,11 +109,46 @@ The scene with the Ambient and Diffuse lighting combined.
 
 ## Exercise 2: Specular lighting
 
+In this exercise, I had to modify the vertex shader that was altered in the past exercise, so that it starts to include, in addition to the ambient and diffuse lighting model, the specular model. 
+
+For this, it will be necessary to calculate the vector R, for reflection of light L, and the vector of the camera V, which points from the vertex in question to the camera.
+
+To do so:
+
+<p align="center">
+  <img src="imgs/RVformula.png" >
+</p>
+<p align="center">
+    <sub>Figure 6. Calculating R and V vectors</sub>
+</p>
+
+
+After calculating the R and V vectors, the specular lighting model to be evaluated should be:
+
+<p align="center">
+  <img src="imgs/specModel.png" >
+</p>
+<p align="center">
+    <sub>Figure 7. Calculating R and V vectors</sub>
+</p>
+
+After the modifications in the template code, the result was:
+
+
+<p align="center">
+  <img src="imgs/result2.png" >
+</p>
+<p align="center">
+    <sub>Figure 8. Exercise 2 Result. Ambient, Diffuse, and Specular lighting</sub>
+</p>
+
+The scene with the Ambient, Diffuse, and Specular lighting combined.
 
 ---
 
 ## **Discussion and difficulties about the assignment**
 
+This assignment was relatively simple, I've found no difficulty or complication hard to solve. It was possible to implement a Phong lighting model as a result without much difficulty. Consequently, I was able to learn more about basic lighting models in OpenGL.
 
 
 ## **Credits**
