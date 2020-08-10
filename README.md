@@ -60,10 +60,22 @@ In this assignment, I'll show how to set up Modern OpenGL on Linux and how to ru
 </p>
 
 <p align="center">
-In this assignment, I will implement geometric transformations that make up the structure of the graphic pipeline. This implementation will be done with the help of the GLM library and its execution will occur in the OpenGL shaders..
+In this assignment, I will implement geometric transformations that make up the structure of the graphic pipeline. This implementation will be done with the help of the GLM library and its execution will occur in the OpenGL shaders.
 </p>
 
+*  [Assignment #4: Basic Lighting](https://github.com/jpvt/Computer_Graphics/tree/master/Assignment%20%234)
+
+    <p align="center">
+      <img src="imgs/cover4.png"  width="500px" >
+    </p>
+
+<p align="center">
+In this assignment, I will implement lighting models traditionally used in rasterization: ambient, diffuse, and specular (or Phong). For this task, I will implement the three models using OpenGL's vertex shader.
+</p>
+
+
 ---
+
 ## Clone
 
 - Clone this repo to your local machine using
