@@ -11,7 +11,6 @@ Repository dedicated to the assignments developed at Introduction to Computer Gr
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Books:](#books)
-- [* ROGERS, David; ADAMS, J. Alan. Mathematical elements for computer graphics. New York: McGraw-Hill, 1990](#ullirogers-david-adams-j-alan-mathematical-elements-for-computer-graphics-new-york-mcgraw-hill-1990liul)
 - [Assignments:](#assignments)
 - [Clone](#clone)
 - [Author](#author)
